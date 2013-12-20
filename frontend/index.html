@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chat</title>
+    <!-- Styles -->
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <!-- Libraries -->
+    <script src="lib/jquery-2.0.3.min.js"></script>
+    <script src="lib/angular.js"></script>
+    <script src="lib/angular-route.min.js"></script>
+    <script src="http://127.0.0.1:1337/socket.io/socket.io.js"></script>
+
+    <!-- App -->
+    <script src="app/init.js"></script>
+    <script src="app/app.js"></script>
+
+    <script src="app/controller/ChatController.js"></script>
+    <script src="app/services/ChatService.js"></script>
+
+    <script src="app/directives/send.js"></script>
+    <script src="app/directives/scrollable.js"></script>
+
+    <script src="app/filters/badwords.js"></script>
+</head>
+<body ng-app="Chat">
+    <ng-view></ng-view>
+</body>
+</html>

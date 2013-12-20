@@ -1,0 +1,21 @@
+<h2>Chat</h2>
+<div id="messagebox" scrollable>
+  <ul>
+    <li ng-repeat="line in lines">
+      <span class="date">[{{ line.timestamp | date:'HH:mm:ss' }}]</span>
+      <span class="username"><b>{{line.user.name}} :</b></span>
+      {{line.text | badword }}
+    </li>
+  </ul>
+</div>
+<div id="userbox">
+  <div class="title">Users online</div>
+  <div id="userlist">
+    <ul>
+      <li ng-repeat="user in users">
+        {{ user.name }}
+      </li>
+    </ul>
+  </div>
+</div>
+<input type="text" name="message" id="message" send>
